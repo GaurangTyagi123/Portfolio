@@ -1,7 +1,8 @@
 *, *::after, *::before {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 html {
   font-size: 62.5%;
@@ -9,9 +10,28 @@ html {
   color: #fff;
   font-family: "Poppins", "Times New Roman"; }
 
+@media (min-width: 75em) {
+  html {
+    font-size: 80%; } }
+
+@media (max-width: 62.5em) {
+  html {
+    font-size: 50%; } }
+
+@media (max-width: 37.5em) {
+  html {
+    font-size: 31.25%; } }
+
+::-webkit-scrollbar {
+  width: .8rem; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #1F51FF;
+  border-radius: 1rem; }
+
 .navbar {
   height: 10vh;
-  width: 90%;
+  width: 100%;
   border-radius: 0 0 1rem 1rem;
   margin-block-end: 5rem;
   color: #000; }
@@ -65,13 +85,19 @@ html {
     border-radius: 50%;
     object-fit: cover;
     object-position: center; }
-  .hero__content .hero__name {
-    font-size: 7.5rem;
-    font-weight: 200;
-    letter-spacing: .1em; }
-  .hero__content .hero__tagline {
-    font-size: 1.5rem;
-    font-weight: 200; }
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-evenly; }
+    .hero__content .hero__name {
+      font-size: 7.5rem;
+      font-weight: 200;
+      letter-spacing: .1em; }
+    .hero__content .hero__tagline {
+      width: 75%;
+      font-size: 1.3rem;
+      font-weight: 300; }
 
 .projects__heading {
   scale: .8;
@@ -148,7 +174,7 @@ html {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: .4rem;
   background-color: #eee;
   height: 4rem;

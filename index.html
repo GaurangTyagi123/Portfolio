@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="media/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,400,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600">
     <link rel="stylesheet" href="css/styles.css">
     <title>Gaurang Tyagi</title>
 </head>
@@ -13,19 +13,18 @@
 <body>
     <nav class="navbar">
         <ul class="navbar__list">
-            <li class="navbar__listitem"><a class="navbar__listlink" href="#">react</a></li>
-            <li class="navbar__listitem"><a class="navbar__listlink" href="#">sass</a></li>
-            <li class="navbar__listitem"><a class="navbar__listlink" href="#">php</a></li>
-            <li class="navbar__listitem"><a class="navbar__listlink" href="#">laravel</a></li>
-            <li class="navbar__listitem"><a class="navbar__listlink" href="#">socials</a></li>
+            <li class="navbar__listitem"><a class="navbar__listlink" href="#">home</a></li>
+            <li class="navbar__listitem"><a class="navbar__listlink" href="#css/sass">sass/css</a></li>
+            <li class="navbar__listitem"><a class="navbar__listlink" href="#php">php</a></li>
+            <li class="navbar__listitem"><a class="navbar__listlink" href="#laravel">laravel</a></li>
+            <li class="navbar__listitem"><a class="navbar__listlink" href="#socials">contact me</a></li>
         </ul>
     </nav>
     <div class="hero">
         <img class="hero__image" src="media/Gaurang_Tyagi.jpg" alt="profile pic">
         <div class="hero__content">
             <p class="hero__name">Gaurang Tyagi</p>
-            <small class="hero__tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
-                officia.</small>
+            <span class="hero__tagline">Result-oriented and motivated Computer Science student with hands-on experience in web design.</span>
         </div>
     </div>
     <!-- <div class="aboutMe">
@@ -35,7 +34,7 @@
         </ul>
     </div> -->
     <div class="projects__list">
-        <h1 class="projects__heading">php- <span>laravel</span></h1>
+        <h1 class="projects__heading" id="php">php- <span>laravel</span></h1>
         <div class="projects__project"
             style="--color1:#1F51FF;--color2:transparent;--percent:30%;--url:url('../Media/projects_noteffy.png')">
             <div class="projects__project_details" style="left:0">
@@ -50,7 +49,7 @@
             </div>
         </div>
 
-        <div class="projects__project"
+        <div class="projects__project" id="laravel"
             style="--color1:transparent;--color2:#1F51FF;--percent:70%;--url:url('../Media/projects_chatapp.png')">
             <div class="projects__project_details" style="right:0;">
                 <h3 class="projects__project_title">Chat App</h3>
@@ -64,7 +63,7 @@
                     target="_blank">Visit</a>
             </div>
         </div>
-        <h1 class="projects__heading">React</h1>
+        <h1 class="projects__heading" id="react">React</h1>
         <div class="projects__project"
             style="--color1:#1F51FF;--color2:transparent;--percent:30%;--url:url('../Media/projects_GUIDE.png')">
             <div class="projects__project_details" style="left:0">
@@ -98,7 +97,7 @@
                     target="_blank">Visit</a>
             </div>
         </div>
-        <h1 class="projects__heading">css / sass</h1>
+        <h1 class="projects__heading" id="css/sass">css / sass</h1>
         <div class="projects__project"
             style="--color1:#1F51FF 30%;--color2:transparent;--percent:30%;--url:url('../Media/projects_internship.png')">
             <div class="projects__project_details" style="left:0">
@@ -114,7 +113,7 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer" id="socials">
         <div class="footer__contact">
             <p>contact- <a href="tel:8506904225">+91 8506904225</a></p>
             <p>email- <a href="mailto:gaurangtyagi7@gmail.com">gaurangtyagi7@gmail.com</a></p>

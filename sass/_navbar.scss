@@ -1,6 +1,6 @@
 .navbar {
     height: 10vh;
-    width: 90%;
+    width: 100%;
     border-radius: 0 0 1rem 1rem;
     margin-block-end: 5rem;
     color: #000;
@@ -68,6 +68,10 @@
     }
 
     &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: space-evenly;
         .hero__name {
             font-size: 7.5rem;
             font-weight: 200;
@@ -75,8 +79,10 @@
         }
 
         .hero__tagline {
-            font-size: 1.5rem;
-            font-weight: 200;
+            width: 75%;
+            font-size: 1.3rem;
+            font-weight: 300;
+
         }
     }
 }
