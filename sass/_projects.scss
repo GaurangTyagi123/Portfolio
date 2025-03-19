@@ -1,41 +1,43 @@
-.projects{
-    &__heading{
+.projects {
+    &__heading {
         scale: .8;
         opacity: 0;
         width: max-content;
         font-size: 5rem;
-        font-family:  Helvetica, sans-serif;
+        font-family: Helvetica, sans-serif;
         font-weight: 200;
         text-transform: uppercase;
         letter-spacing: .4rem;
         text-align: start;
         position: relative;
-        text-decoration:underline .3rem ;
+        text-decoration: underline .3rem;
         text-underline-offset: 2rem;
         animation: fade-in forwards;
         animation-timeline: view();
 
-        &>span{
+        &>span {
             text-transform: lowercase;
         }
     }
-    &__list{
+
+    &__list {
         height: 100%;
         display: flex;
         flex-direction: column;
         gap: 5rem;
         margin-inline: 5rem;
     }
-    &__project{
-        min-height: 100vh;
+
+    &__project {
+        min-height: 150vh;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(90deg,var(--color1) var(--percent) , var(--color2) var(--percent)),var(--url);
+        background: linear-gradient(90deg, var(--color1) var(--percent), var(--color2) var(--percent)), var(--url);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: var(--size);
 
         scale: .8;
         opacity: 0;
@@ -43,7 +45,20 @@
         animation-timeline: view();
         animation-range: entry;
     }
-    &__project_details{
+
+    @media (max-width:62.5em) {
+        &__project {
+            min-height: 110vh;
+        }
+    }
+
+    @media (max-width:50em) {
+        &__project {
+            min-height: 70vh;
+        }
+    }
+
+    &__project_details {
         height: 100%;
         width: 30%;
         position: absolute;
@@ -53,7 +68,10 @@
         justify-content: space-evenly;
         gap: 5rem;
     }
-    &__project_title{
+
+    
+
+    &__project_title {
         font-size: 3rem;
         text-transform: uppercase;
         font-weight: 200;
@@ -63,7 +81,8 @@
         outline-offset: 1rem;
         margin-block-start: 1rem;
     }
-    &__project_desc{
+
+    &__project_desc {
         font-size: 1.3rem;
         margin-inline: 3rem;
         display: flex;
@@ -72,8 +91,36 @@
         font-weight: 200;
         text-align: baseline;
     }
-    &__project_link,&__project_link:visited{
-        color:$color-primary;
+
+    @media (max-width:31.25em) {
+        &__project_desc {
+            font-size: 1.2rem
+        }
+    }
+    @media (max-width:25em) {
+        &__project {
+            background: linear-gradient(to right bottom, $color-primary, darken($color-primary, 20));
+
+        }
+        &__project_details {
+            outline: 2px solid #eee;
+            height: 70vh;
+            width: 100%;
+            position: initial;
+            gap: 0;
+            justify-content: space-evenly;
+            box-shadow: 0 1.5rem 4rem $shadow-primary ;
+        }
+        &__project_title{
+            font-size: 5rem;
+        }
+        &__project_desc{
+            font-size: 1.5rem;
+        }
+    }
+    &__project_link,
+    &__project_link:visited {
+        color: $color-primary;
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 600;
@@ -88,25 +135,29 @@
         box-shadow: 0 1.5rem 4rem $shadow-primary;
         transition: all .4s ease-in-out;
     }
-    &__project_link:hover{
+
+    &__project_link:hover {
         translate: 0 -.5rem;
         scale: 1.01;
         box-shadow: 0 1.5rem 4rem $shadow-secondary;
     }
-    &__project_link:active{
+
+    &__project_link:active {
         translate: 0 .2rem;
         scale: .99;
-        box-shadow: 0 1.5 4rem rgba(0,0,0,.8);
+        box-shadow: 0 1.5 4rem rgba(0, 0, 0, .8);
     }
 }
+
 @keyframes fade-in {
-    to{
+    to {
         scale: 1;
         opacity: 1;
     }
 }
+
 @keyframes slide-right {
-    to{
+    to {
         width: 100%;
     }
 }

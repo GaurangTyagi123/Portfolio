@@ -10,19 +10,24 @@ html{
     color : #fff;
     font-family: $font-poppins;
 }
-@media (min-width:75em){
-    html{
-        font-size: 80%;
-    }
-}
+// @media (min-width:75em){
+//     html{
+//         font-size: 80%;
+//     }
+// }
 @media (max-width:62.5em){
     html{
         font-size: 50%;
     }
 }
-@media (max-width:37.5em){
+@media (max-width:50em){
     html{
         font-size: 31.25%;
+    }
+}
+@media (max-width:31.25em){
+    html{
+        font-size: 25%;
     }
 }
 ::-webkit-scrollbar{
