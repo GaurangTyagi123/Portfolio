@@ -86,6 +86,9 @@
         }
     }
 }
+.float_nav{
+    display: none;
+}
 @media (max-width:25em) {
     .navbar{
         display: none;
@@ -94,6 +97,7 @@
         display: none;
     }
     .float_nav{
+        display: block;
         position: absolute;
         z-index: 10;
         right: 5rem;
