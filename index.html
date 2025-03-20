@@ -11,14 +11,17 @@
 </head>
 
 <body>
-    <div class="float_nav" data-hidden="false">
-        <ul class="navbar__list">
-            <li class="navbar__listitem"><a class="navbar__listlink" href="#">home</a></li>
-            <li class="navbar__listitem"><a class="navbar__listlink" href="#css/sass">sass/css</a></li>
-            <li class="navbar__listitem"><a class="navbar__listlink" href="#php">php</a></li>
-            <li class="navbar__listitem"><a class="navbar__listlink" href="#laravel">laravel</a></li>
-            <li class="navbar__listitem"><a class="navbar__listlink" href="#socials">contact me</a></li>
-        </ul>
+    <ul class="navbar__list__hamburger">
+        <li class="navbar__listitem"><a class="navbar__listlink" href="#">home</a></li>
+        <li class="navbar__listitem"><a class="navbar__listlink" href="#css/sass">sass/css</a></li>
+        <li class="navbar__listitem"><a class="navbar__listlink" href="#php">php</a></li>
+        <li class="navbar__listitem"><a class="navbar__listlink" href="#laravel">laravel</a></li>
+        <li class="navbar__listitem"><a class="navbar__listlink" href="#socials">contact me</a></li>
+    </ul>
+    <div class="hamburger" data-active="false">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
     <nav class="navbar">
         <ul class="navbar__list">
@@ -33,7 +36,8 @@
         <img class="hero__image" src="./media/Gaurang_Tyagi.jpg" alt="profile pic">
         <div class="hero__content">
             <p class="hero__name">Gaurang Tyagi</p>
-            <span class="hero__tagline">Result-oriented and motivated Computer Science student with hands-on experience in web design.</span>
+            <span class="hero__tagline">Result-oriented and motivated Computer Science student with hands-on experience
+                in web design.</span>
         </div>
     </div>
     <!-- <div class="aboutMe">
@@ -111,9 +115,10 @@
             style="--color1:#1F51FF 30%;--color2:transparent;--percent:30%;--url:url('../Media/projects_internship.png');--size:contain">
             <div class="projects__project_details" style="left:0">
                 <h3 class="projects__project_title">Internship</h3>
-                <ul class="projects__project_desc"><li>Design and development of web pages for Ram Lal Anand College's
-                    official website, specifically focusing oncrafting a user-friendly, responsive and customizable
-                    interface for showcasing faculty profiles.</li> 
+                <ul class="projects__project_desc">
+                    <li>Design and development of web pages for Ram Lal Anand College's
+                        official website, specifically focusing oncrafting a user-friendly, responsive and customizable
+                        interface for showcasing faculty profiles.</li>
                     <li>honed my skills in UI/UX design, ensuring an intuitive
                         and visually appealing platform for faculty members andwebsite visitors alike.</li>
                 </ul>
@@ -134,7 +139,7 @@
                     <use xlink:href="Media/footer_sprite.svg#icon-github"></use>
                 </svg>
             </a>
-            <a href="www.linkedin.com/in/gaurang-tyagi-a1b758236" class="footer__icon-container" data-tag="linkedin"
+            <a href="https://www.linkedin.com/in/gaurang-tyagi-a1b758236/" class="footer__icon-container" data-tag="linkedin"
                 target="_blank">
                 <svg class="footer__icon">
                     <use xlink:href="Media/footer_sprite.svg#icon-linkedin"></use>
@@ -148,6 +153,7 @@
             </a>
         </div>
     </footer>
+    <script src="./index.js"></script>
 </body>
 
 </html>

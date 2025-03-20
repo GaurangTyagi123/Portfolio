@@ -10,6 +10,10 @@ html {
   color: #fff;
   font-family: "Poppins", "Times New Roman"; }
 
+@media (min-width: 75em) {
+  html {
+    font-size: 55%; } }
+
 @media (max-width: 62.5em) {
   html {
     font-size: 50%; } }
@@ -99,36 +103,58 @@ html {
       font-size: 1.3rem;
       font-weight: 300; }
 
-.float_nav {
+.navbar__list__hamburger {
   display: none; }
 
 @media (max-width: 25em) {
-  .navbar {
-    display: none; }
-  .float_nav > .navbar__list {
-    display: none; }
-  .float_nav {
-    display: block;
-    position: absolute;
-    z-index: 10;
-    right: 5rem;
+  .hamburger {
+    height: 15rem;
+    width: 15rem;
+    background-color: #373737;
+    position: fixed;
+    z-index: 20;
     top: 5rem;
-    height: 12rem;
-    width: 12rem;
-    background-color: lime;
+    right: 5rem;
     border-radius: 50%; }
-  .float_nav[data-hidden=true] {
-    height: 1000rem;
+  .hamburger span {
+    position: absolute;
+    height: 1rem;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: #eee;
+    transition: all .3s ease-in-out; }
+  .hamburger span:nth-child(1) {
+    top: 25%; }
+  .hamburger span:nth-child(3) {
+    top: 75%; }
+  .hamburger[data-active=true] span:nth-child(1) {
+    top: 50%;
+    translate: -50% -50%;
+    rotate: 45deg; }
+  .hamburger[data-active=true] span:nth-child(2) {
+    opacity: 0; }
+  .hamburger[data-active=true] span:nth-child(3) {
+    top: 50%;
+    translate: -50% -50%;
+    rotate: -45deg; }
+  .navbar__list__hamburger {
+    position: fixed;
+    z-index: 20;
+    right: -100%;
+    height: 100%;
     width: 100%;
-    background-color: red;
-    border-radius: initial; }
-    .float_nav[data-hidden=true] > .navbar__list {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      height: 50vh;
-      gap: 2rem; } }
+    background-color: #222121;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    transition: right .3s ease-in-out; }
+    .navbar__list__hamburger .navbar__listitem {
+      height: 10rem;
+      border: none; } }
 
 @media (max-width: 25em) {
   .hero {
@@ -162,7 +188,7 @@ html {
   margin-inline: 5rem; }
 
 .projects__project {
-  min-height: 150vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -177,9 +203,13 @@ html {
   animation-timeline: view();
   animation-range: entry; }
 
+@media (min-width: 75em) {
+  .projects {
+    min-height: 100%; } }
+
 @media (max-width: 62.5em) {
   .projects__project {
-    min-height: 110vh; } }
+    min-height: 140vh; } }
 
 @media (max-width: 50em) {
   .projects__project {

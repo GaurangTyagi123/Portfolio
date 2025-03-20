@@ -29,7 +29,7 @@
     }
 
     &__project {
-        min-height: 150vh;
+        min-height: 100vh;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -45,10 +45,12 @@
         animation-timeline: view();
         animation-range: entry;
     }
-
+    @media (min-width:75em){
+        min-height: 100%;
+    }
     @media (max-width:62.5em) {
         &__project {
-            min-height: 110vh;
+            min-height: 140vh;
         }
     }
 
