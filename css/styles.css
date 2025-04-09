@@ -126,6 +126,10 @@ html {
   display: none; }
 
 @media (max-width: 25em) {
+  .navbar__list {
+    display: none; } }
+
+@media (max-width: 25em) {
   .hamburger {
     height: 15rem;
     width: 15rem;
