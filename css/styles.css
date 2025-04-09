@@ -93,7 +93,8 @@ html {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    gap: 3rem; }
     .hero__content .hero__name {
       font-size: 7.5rem;
       font-weight: 200;
@@ -102,6 +103,24 @@ html {
       width: 75%;
       font-size: 1.3rem;
       font-weight: 300; }
+  .hero__link, .hero__link:visited {
+    align-self: center;
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.8rem;
+    background-color: #1F51FF;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.6);
+    transition: all .3s ease-in-out; }
+  .hero__link:hover {
+    translate: 0 -1.1rem;
+    scale: 1.1;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  .hero__link:active {
+    scale: 1;
+    translate: 0 0rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
 
 .navbar__list__hamburger {
   display: none; }
@@ -298,6 +317,57 @@ html {
 @keyframes slide-right {
   to {
     width: 100%; } }
+
+.aboutMe {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 5rem;
+  align-items: center; }
+  .aboutMe .-u-start {
+    align-self: flex-start;
+    margin-inline-start: 5rem; }
+  .aboutMe .skill__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly; }
+    .aboutMe .skill__container .skill__programming {
+      font-size: 1.8rem;
+      font-family: "Poppins", "Times New Roman";
+      text-transform: capitalize;
+      font-weight: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: center;
+      gap: 1rem; }
+      .aboutMe .skill__container .skill__programming__heading {
+        list-style: none;
+        font-weight: 400;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        margin-bottom: 5rem; }
+    .aboutMe .skill__container .skill__webdev {
+      font-size: 1.8rem;
+      font-family: "Poppins", "Times New Roman";
+      text-transform: capitalize;
+      font-weight: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: center;
+      gap: 1rem; }
+      .aboutMe .skill__container .skill__webdev__heading {
+        list-style: none;
+        font-weight: 400;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        margin-bottom: 5rem; }
 
 .footer {
   display: flex;

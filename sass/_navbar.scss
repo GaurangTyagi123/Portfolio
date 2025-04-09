@@ -72,6 +72,7 @@
         flex-direction: column;
         align-items: baseline;
         justify-content: space-evenly;
+        gap: 3rem;
         .hero__name {
             font-size: 7.5rem;
             font-weight: 200;
@@ -84,6 +85,27 @@
             font-weight: 300;
 
         }
+    }
+    &__link,&__link:visited{
+        align-self: center;
+        color: #eee;
+        text-decoration: none;
+        font-size: 1.8rem;
+        background-color: $color-primary;
+        padding: 1rem;
+        border-radius: 2rem;
+        box-shadow: 0 1.5rem 4rem $shadow-primary;
+        transition: all .3s ease-in-out;
+    }
+    &__link:hover{
+        translate: 0 -1.1rem;
+        scale: 1.1;
+        box-shadow: 0 1.5rem 4rem $shadow-secondary;
+    }
+    &__link:active{
+        scale: 1;
+        translate: 0 0rem;
+        box-shadow: 0 1.5rem 4rem $shadow-secondary;
     }
 }
 .navbar__list__hamburger{
